@@ -83,6 +83,14 @@ welcome screens, marketing copy, or explanatory panels inside the app.
 
 ## Current Status
 
-The repository currently contains planning docs only. The Go module and TUI
-application shell still need to be created.
+The repository contains planning docs plus an initial Go module and Bubble Tea
+application shell.
 
+Current code anchors:
+
+- `cmd/jire/main.go`: executable entrypoint.
+- `internal/app/model.go`: root Bubble Tea model, focus handling, tabs, static
+  request data, body textarea, and response viewport.
+- `internal/ui/styles.go`: shared Lipgloss styles and small layout helpers.
+
+HTTP execution and local persistence are not implemented yet.

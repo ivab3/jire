@@ -36,7 +36,7 @@ Core workflow:
 
 ## Planned Stack
 
-- Language: Go
+- Language: Go 1.25+
 - TUI: Bubble Tea
 - UI components: Bubbles
 - Styling: Lipgloss
@@ -95,15 +95,20 @@ added later if search, tags, migrations, or large histories start to matter.
 
 ## Development
 
-The implementation has not been scaffolded yet. The expected next step is to
-create a Go module and add the first Bubble Tea application shell.
+The Go module and first Bubble Tea application shell are scaffolded.
 
-Planned commands:
+Useful commands:
 
 ```sh
 go run ./cmd/jire
 go test ./...
 go fmt ./...
+```
+
+In sandboxed environments, point Go caches at writable directories:
+
+```sh
+GOCACHE=/private/tmp/jire-go-build GOMODCACHE=/private/tmp/jire-gomodcache go test ./...
 ```
 
 ## Design Principles
@@ -116,4 +121,3 @@ go fmt ./...
   core model.
 - Keep the interface calm: projects, requests, tabs, editor, response.
 - Make saved data easy to read, diff, back up, and delete.
-
