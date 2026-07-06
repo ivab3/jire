@@ -13,11 +13,11 @@ the base HTTP workflow feels good.
 
 ## Phase 1: Application Shell
 
-- Create Go module.
-- Add Bubble Tea, Bubbles, and Lipgloss.
-- Start a full-screen TUI.
-- Render static sidebar, tabs, request editor, and response pane.
-- Add basic key bindings for quitting, focus movement, and tab switching.
+- [x] Create Go module.
+- [x] Add Bubble Tea, Bubbles, and Lipgloss.
+- [x] Start a full-screen TUI.
+- [x] Render static sidebar, tabs, request editor, and response pane.
+- [x] Add basic key bindings for quitting, focus movement, and tab switching.
 
 ## Phase 2: In-Memory Requests
 
@@ -71,4 +71,3 @@ the base HTTP workflow feels good.
 - Secret masking.
 - Cookie jar.
 - Proxy and TLS controls.
-
