@@ -100,15 +100,18 @@ The Go module and first Bubble Tea application shell are scaffolded.
 Useful commands:
 
 ```sh
-go run ./cmd/jire
-go test ./...
-go fmt ./...
+make run
+make test
+make build
+make fmt
+make tidy
 ```
 
-In sandboxed environments, point Go caches at writable directories:
+The Makefile points Go caches at writable `/tmp` directories by default.
+Override them when needed:
 
 ```sh
-GOCACHE=/private/tmp/jire-go-build GOMODCACHE=/private/tmp/jire-gomodcache go test ./...
+GOCACHE=$HOME/Library/Caches/go-build GOMODCACHE=$HOME/go/pkg/mod make test
 ```
 
 ## Design Principles
