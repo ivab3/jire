@@ -5,3 +5,5 @@
 *.test
 coverage.out
 
+# Local implementation notes.
+/.local-notes/request-workflow-next.md

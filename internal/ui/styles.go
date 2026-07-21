@@ -1,6 +1,10 @@
 package ui
 
-import "charm.land/lipgloss/v2"
+import (
+	"strings"
+
+	"charm.land/lipgloss/v2"
+)
 
 type Styles struct {
 	Title            lipgloss.Style
@@ -70,6 +74,27 @@ func (s Styles) Panel(active bool) lipgloss.Style {
 		return s.activePanel
 	}
 	return s.panel
+}
+
+func MethodStyle(method string) lipgloss.Style {
+	color := lipgloss.Color("114")
+	switch strings.ToUpper(strings.TrimSpace(method)) {
+	case "GET":
+		color = lipgloss.Color("39")
+	case "POST":
+		color = lipgloss.Color("42")
+	case "PUT":
+		color = lipgloss.Color("214")
+	case "PATCH":
+		color = lipgloss.Color("220")
+	case "DELETE":
+		color = lipgloss.Color("196")
+	case "HEAD":
+		color = lipgloss.Color("141")
+	case "OPTIONS":
+		color = lipgloss.Color("45")
+	}
+	return lipgloss.NewStyle().Bold(true).Foreground(color)
 }
 
 func Clamp(value int, min int, max int) int {
